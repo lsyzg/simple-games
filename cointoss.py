@@ -1,9 +1,19 @@
 def cointoss():
     import random
-
-    ht = ["heads","tails"]
-    head_tails = random.choice(ht)
-    if input("Heads or tails? (lowercase): ") == head_tails:
-        print(f"You win! Computer chose {head_tails}")
-    else:
-        print(f"You lost. Computer chose {head_tails}")
+    def tf(yn):
+        if yn == "n":
+            print("exiting...")
+            return False
+        else:
+            return True
+    ht = ["h","t"]
+    ht_dict = {"h":"heads","t":"tails"}
+    run = True
+    while run:
+        head_tails = random.choice(ht)
+        if input("Heads or tails?: ") == head_tails:
+            yn = input(f"You win! Computer chose {ht_dict.get(head_tails)}. Play again?(y/n): ")
+            run = tf(yn)
+        else:
+            yn = input(f"You lost. Computer chose {ht_dict.get(head_tails)}. Play again?(y/n): ")
+            run = tf(yn)
