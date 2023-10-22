@@ -1,14 +1,10 @@
 def numguesser():
     import random
+    from functions import tf,quit
     run = True
     range = int(input("What would you like the range to be?: "))
     computer = random.randint(1,range)
-    def tf(ask):
-            if ask == "n":
-                print("exiting...")
-                return False
-            else:
-                return True
+
     while run:
         user = input("What number do you think it is?: ")
         if user.isnumeric():
@@ -22,7 +18,4 @@ def numguesser():
             else:
                 print("Keep trying.")
         else:
-            if user == "quit":
-                print(f"the number was {computer}.")
-                print("exiting...")
-                run = False
+            quit(user)
