@@ -1,14 +1,13 @@
 def rps():
     import random
     possact = ["r", "p", "s"]
-    word_dict = {"r":"rock", "p":"paper", "s":"scissor"}
+    word_dict = {"r":"rock", "p":"paper", "s":"scissor"}    
     def tf(ask):
         if ask == "n":
             print("exiting...")
             return False
         else:
             return True
-
     run = True
     while run:
         user = input("input rock(r), paper(p), or scissor(s): ")
