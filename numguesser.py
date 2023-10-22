@@ -23,5 +23,6 @@ def numguesser():
                 print("Keep trying.")
         else:
             if user == "quit":
+                print(f"the number was {computer}.")
                 print("exiting...")
                 run = False

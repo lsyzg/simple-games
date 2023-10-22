@@ -11,9 +11,10 @@ def cointoss():
     run = True
     while run:
         head_tails = random.choice(ht)
-        if input("Heads or tails?: ") == head_tails:
-            yn = input(f"You win! Computer chose {ht_dict.get(head_tails)}. Play again?(y/n): ")
-            run = tf(yn)
+        user = input("Heads(h) or tails(t)?: ")
+        if user == head_tails:
+            ask = input(f"You win! The coin flipped {ht_dict.get(head_tails)}. Play again?(y/n): ")
+            run = tf(ask)
         else:
-            yn = input(f"You lost. Computer chose {ht_dict.get(head_tails)}. Play again?(y/n): ")
-            run = tf(yn)
+            ask = input(f"You lost. The coin flipped {ht_dict.get(head_tails)}. Play again?(y/n): ")
+            run = tf(ask)

@@ -13,6 +13,9 @@ def rps():
         user = input("input rock(r), paper(p), or scissor(s): ")
         rand = random.choice(possact)
         print(f"computer chose {word_dict.get(rand)}")
+        if user == "quit":
+            print("exiting")
+            run = False
         if rand == user:
             print("Same choice, try again")
         elif user == "r":
