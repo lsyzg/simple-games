@@ -16,6 +16,10 @@ def numguesser():
                     range = int(input("What would you like the range to be?: "))
                     computer = random.randint(1,range)       
             else:
+                if user > computer:
+                    print("Go lower")
+                else:
+                    print("Go higher")
                 print("Keep trying.")
         else:
             quit(user)
