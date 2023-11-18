@@ -2,7 +2,7 @@ def numguesser():
     import random
     from functions import tf,quit
     run = True
-    range = int(input("What would you like the range to be?: "))
+    range = int(input("What would you like the highest number to be?: "))
     computer = random.randint(1,range)
 
     while run:
@@ -22,4 +22,4 @@ def numguesser():
                     print("Go higher")
                 print("Keep trying.")
         else:
-            quit(user)
+            run = quit(user)

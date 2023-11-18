@@ -8,7 +8,7 @@ def rps():
     while run:
         user = input("input rock(r), paper(p), or scissor(s): ")
         rand = random.choice(possact)
-        quit(user)
+        run = quit(user)
         if rand == user:
             print("Same choice, try again")
         elif user == "r":
