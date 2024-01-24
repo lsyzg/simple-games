@@ -3,6 +3,7 @@ from cointoss import cointoss
 from numguesser import numguesser
 from rps import rps
 from wordle import wordle
+from pig import pig
 
 def tf(ask):
     if ask == "n":
